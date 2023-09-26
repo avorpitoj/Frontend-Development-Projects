@@ -19,7 +19,7 @@ body
     padding: 0;
     animation: shakeAnimation 1s ease infinite;
 }
-
+/* Adding Shake animation to the top left image */
 @keyframes shakeAnimation 
 {
     0% {
@@ -83,6 +83,7 @@ body
     animation: swing 1s ease-in-out infinite; /* Apply the swing animation */
     
 }
+/* Adding Swing animation to the bottom right image */
 @keyframes swing 
 {
     0%{
@@ -113,6 +114,11 @@ h1
     margin: 0%;
     padding: 0%;
 }
+/* Applying Animation to the game title */
+.game-title 
+{
+    animation: titleAnimation 3s ease-out infinite;
+}
 @keyframes titleAnimation 
 {
     0% 
@@ -127,14 +133,9 @@ h1
     }
 }
 
-.game-title 
-{
-    animation: titleAnimation 3s ease-out infinite; /* Apply the animation */
-}
-
-
 p
-{  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+{  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     font-size:2rem;  
     font-weight:900;  
@@ -142,10 +143,10 @@ p
     margin-bottom:2rem;
     margin-top: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: rgb(140, 9, 188);
-    
+    color: rgb(140, 9, 188);    
 }
 
+/* Centering the buttons uding flex */
 .buttons
 {  
     display: flex; 
@@ -165,11 +166,11 @@ button
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
     transform: perspective(1000px) rotateX(0deg);  
     transform-origin: bottom;
-     /* Animation for button styles */  
+    /* Animation for button styles */  
      animation: spin 2s linear ;
     
 }
-
+/* Adding Spin animation to the buttons */
 @keyframes spin 
 {  
     0% { transform: rotate(0deg); } 
@@ -192,18 +193,19 @@ button:hover
 
 
 
-/* CSS for the leaderboard */
-.leaderboard {
+/* Style for the leaderboard position */
+.leaderboard 
+{
     position: absolute;
     top: 205px; /* Adjust the top margin as needed */
     right: 1px; /* Adjust the right margin as needed */
-    /* padding: 10px; */
     border: 1px solid #f7e630;
     background-color: #562478;
     border-radius: 5px;
 }
 
-.leaderboard caption {
+.leaderboard caption 
+{
     font-weight: bold;
     font-size: 2rem;
     font-style: oblique;
@@ -223,23 +225,21 @@ button:hover
 
 
 /* CSS to Hide both horizontal and vertical scrollbars */
-body {
-    
+body 
+{
     -ms-overflow-style: none; /* Internet Explorer/Edge */
 }
-
-/* Hide scrollbars for Webkit-based browsers (e.g., Chrome, Safari) */
-body::-webkit-scrollbar {
+/* CSS to Hide scrollbars for Webkit-based browsers (e.g., Chrome, Safari) */
+body::-webkit-scrollbar 
+{
     width: 0.2rem; /* Adjust as needed */
 }
-
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb 
+{
     background-color: transparent; /* Hide the thumb */
 }
-
-/* Optional: Add styles to the scrollbar track if desired */
-body::-webkit-scrollbar-track {
+/* Add styles to the scrollbar track if desired */
+body::-webkit-scrollbar-track 
+{
     background-color: transparent;
 }
-
-
