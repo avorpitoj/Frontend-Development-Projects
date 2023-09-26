@@ -184,6 +184,8 @@ button:hover
 }
 
 
+/* Using an id selector # to target these specific elements to change their colour */ 
+
 #rock{     background-color: rgb(236, 247, 85);   }
 #paper{    background-color: rgb(236, 247, 85);   }
 #scissors{ background-color: rgb(236, 247, 85);   }
