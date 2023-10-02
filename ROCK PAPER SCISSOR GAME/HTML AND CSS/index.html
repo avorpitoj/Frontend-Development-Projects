@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
       <head>    
             <meta charset="UTF-8">    
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">    
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">   
             <title>Rock Paper Scissors Game</title>    
             <link rel="stylesheet" href="style.css">
         </head>
     
         <body>  
              <!-- This is the UI of the web app -->  
-            
-            <img src="assets/girl-scissors.png" alt="girl-scissors" class="bottom-left-image">
-            <img src="assets/children-friends.png" alt="girl-scissors" class="bottom-right-image">
-            
+
             <div class="image-container">
                 <img src="assets/paperplane_boy.png" alt="paperplane_boy" class="top-left-image">
                 <img src="assets/three-children.png" alt="three-children" class="top-middle-image">
@@ -24,34 +20,52 @@
             <h1 class="game-title">Rock Paper Scissors Game</h1>
             
             <p>Choose your move:</p> 
+           
             
             <div class="buttons" >        
-                <button id="rock"><img src="assets/rock.png" alt="Rock" width="200" height="200" style="vertical-align:middle; margin:20px 0px;"></button>
-                <button id="paper"><img src="assets/paper.png" alt="Paper" width="200" height="200" style="vertical-align:middle; margin:20px 0px;"></button>
-                <button id="scissors"><img src="assets/scissors.png" alt="Scissors" width="200" height="200" style="vertical-align:middle; margin:20px 0px;"></button>
-             </div> 
-            
-                <p id="result"></p>   
+                <button id="rock" type="button"><img src="assets/rock.png" alt="Rock" style="height:90%;width:90%"></button>
+                <button id="paper" type="button"><img src="assets/paper.png" alt="Paper" style="height:90%;width:90%" ></button>
+                <button id="scissors" type="button"><img src="assets/scissors.png" alt="Scissors" style="height:90%;width:90%" ></button>
+            </div> 
+
+            <div> 
+                <p id="result"></p>
                 <p id="scores">        
-                 Your score: <span id="user-score">0</span>        
-                 Computer score: <span id="computer-score">0</span>    
-                </p>
+                    Your score: <span id="user-score">0</span>        
+                    Computer score: <span id="computer-score">0</span> 
+                   </p>
+            </div> 
             
-    <script src="index.js"></script>
+            <div class = "leader"> 
+            <table class="leaderboard">
+                <caption>Leaderboard</caption>
+                <thead>
+                    <tr>
+                        <th>Time(in sec)</th>
+                        <th>Player Won By</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-list">
+                <!-- Leaderboard entries will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>   
+
+            <script src="index.js"></script>
             
-    <table class="leaderboard">
-        <caption>Leaderboard</caption>
-        <thead>
-            <tr>
-                <th>Time(in sec)</th>
-                <th>Player Won By</th>
-                <th>Points</th>
-            </tr>
-        </thead>
-        <tbody id="leaderboard-list">
-            <!-- Leaderboard entries will be added here dynamically -->
-        </tbody>
-    </table>
-            
+    
+           
+<footer>
+            <div class="bottom-image-container">
+                                                                                                                                                    
+                    <img src="assets/girl_scissors.png" alt="girl_scissors" class="bottom-left-image"> 
+                    <img src="assets/children-friends.png" alt="children-friends" class="bottom-middle-image"> 
+                    <img src="assets/girl-scissors.png" alt="girl-scissors" class="bottom-right-image"> 
+            </div>   
+</footer> 
+
+ 
+
         </body>
 </html>
