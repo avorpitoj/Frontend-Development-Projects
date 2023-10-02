@@ -1,6 +1,7 @@
 body
 {
     background-color:#f4ffb4;
+    height: 100%;
     
 }
 .image-container 
@@ -8,7 +9,6 @@ body
     display: flex;
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
-    height: 200px; /* Set a fixed height for the container */
 }
 
 .top-left-image 
@@ -17,26 +17,8 @@ body
     height: 200px;
     margin: 0;
     padding: 0;
+    margin-top: 0px;
     animation: shakeAnimation 1s ease infinite;
-}
-/* Adding Shake animation to the top left image */
-@keyframes shakeAnimation 
-{
-    0% {
-        transform: translateX(0); /* Start with no translation */
-       }
-    25% {
-        transform: translateX(-10px); /* Move left by 10px */
-        }
-    50% {
-        transform: translateX(10px); /* Move right by 10px */
-        }
-    75% {
-        transform: translateX(-10px); /* Move left by 10px */
-        }
-    100% {
-        transform: translateX(0); /* Return to the original position */
-         }
 }
 
 .top-middle-image 
@@ -44,45 +26,57 @@ body
     width: 500px;
     height: 200px;
     margin: 0 auto;
+    margin-top: 0px;
     padding: 0;
-   /* margin-left: 25%;  Push the middle image to the right */
-   animation: swing 2s ease-in-out infinite;
+    animation: swing 2s ease-in-out infinite;
    
 }
 
 .top-right-image
 {
-    width: 250px;
-    height: 210px;
-    margin: 0;
-    padding: 0; 
+    width: 260px;
+    height: 220px;
+    margin-top: 5px;
+    margin-right: 0%; 
 
+}
+
+.bottom-image-container
+{
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center /* Center horizontally */ 
+  
 }
 
 .bottom-left-image 
 {
-    position: absolute; /* Fixed position */
-    bottom: 0; /* Stick to the bottom */
-    left: 0; /* Stick to the left */
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
     margin: 0;
     padding: 0; 
     animation: swing 1s ease-in-out infinite; /* Apply the swing animation */
 
 }
 
+.bottom-middle-image 
+{
+    width: 650px; 
+    margin: 0 auto;
+    padding: 0;
+    animation: swing 1s ease-in-out infinite; /* Apply the swing animation */
+    
+}
 .bottom-right-image 
 {
-    position: absolute; 
-    bottom: 0; /* Stick to the bottom */
-    right: 0;  /* Stick to the right */
-    width: 500px; /* Adjust the width as needed */
+    width: 100px; 
     margin: 0;
     padding: 0;
     animation: swing 1s ease-in-out infinite; /* Apply the swing animation */
     
 }
+
+
+
 /* Adding Swing animation to the bottom right image */
 @keyframes swing 
 {
@@ -105,7 +99,7 @@ h1
 {  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
-    font-size:6rem; 
+    font-size:5rem; 
     text-align:center;  
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: rgb(110, 4, 168);
@@ -140,32 +134,36 @@ p
     font-size:2rem;  
     font-weight:900;  
     text-align:center;  
-    margin-bottom:2rem;
-    margin-top: 2rem;
+    margin-bottom: 0rem;;
+    margin-top: 0rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: rgb(140, 9, 188);    
+    align-self: center;
 }
 
-/* Centering the buttons uding flex */
+/* Centering the buttons using flex */
 .buttons
-{  
-    display: flex; 
+{ 
+    min-width: 30%;
+    max-width: 60vh;
+    /* min-height: 30vh; */
+    max-height: 60vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; 
     justify-content: center;  
-    align-items: center;
+    margin: auto;
+    padding-left: 10px;
+    
 }
 button
 {  
-    border:none;  
-    font-size:200px;
+    border:none;
+    border-radius:50px;  
     margin:1rem;  
     padding:1rem;  
-    cursor:pointer;  
-    border-radius:50px;  
+    cursor:pointer;   
     transition:all 0.3s ease-in-out;
-    /* Add the following properties for the 3D effect */  
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
-    transform: perspective(1000px) rotateX(0deg);  
-    transform-origin: bottom;
     /* Animation for button styles */  
      animation: spin 2s linear ;
     
@@ -186,21 +184,22 @@ button:hover
 
 /* Using an id selector # to target these specific elements to change their colour */ 
 
-#rock{     background-color: rgb(236, 247, 85);   }
-#paper{    background-color: rgb(236, 247, 85);   }
-#scissors{ background-color: rgb(236, 247, 85);   }
-
+#rock{     background-color: rgb(255, 244, 33);   }
+#paper{    background-color: rgb(255, 244, 33);   }
+#scissors{ background-color: rgb(255, 244, 33);   }
 #user-score{  color:#2196f3;}
 #computer-score{  color:#ff0000;}
 
 
-
 /* Style for the leaderboard position */
+
+table{
+    margin: auto;
+}
 .leaderboard 
-{
-    position: absolute;
-    top: 205px; /* Adjust the top margin as needed */
-    right: 1px; /* Adjust the right margin as needed */
+{ 
+    justify-content: center;
+    align-content: center;
     border: 1px solid #f7e630;
     background-color: #562478;
     border-radius: 5px;
@@ -224,6 +223,16 @@ button:hover
     color: #fbf705;
 }
 
+.footer
+{
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    align-content: flex-end;
+    position: relative;
+    bottom: 0;
+   
+}
 
 
 /* CSS to Hide both horizontal and vertical scrollbars */
@@ -244,4 +253,113 @@ body::-webkit-scrollbar-thumb
 body::-webkit-scrollbar-track 
 {
     background-color: transparent;
+}
+
+
+
+
+/* Media Query for All Images */
+@media screen and (max-width: 768px) 
+{
+    /* Adjust common styles for all images for smaller screens */
+    .top-left-image
+    {
+        width: 100px; /* Adjust as needed for smaller screens */
+        height: 100px; /* Adjust as needed for smaller screens */
+    }
+    .top-middle-image,
+    .top-right-image
+    {
+        width: 120px; /* Adjust as needed for smaller screens */
+        height: 100px; /* Adjust as needed for smaller screens */
+    }
+    
+    .bottom-middle-image
+    {
+        width: 200px; /* Adjust as needed for smaller screens */
+        height: 100px; /* Adjust as needed for smaller screens */
+    }
+    .bottom-right-image
+    {
+        width: 50px; /* Adjust as needed for smaller screens */
+        height: 90px; /* Adjust as needed for smaller screens */
+        margin-right: 0;
+    }
+    .bottom-left-image
+    {
+        width: 80px; /* Adjust as needed for smaller screens */
+        height: 80px; /* Adjust as needed for smaller screens */
+        margin-left: 0;
+    }
+}
+
+
+/* Media Query for .game-title, .buttons, and .leaderboard */
+@media screen and (max-width: 768px) 
+{
+    .game-title {
+        font-size: 2rem; /* Adjust as needed for smaller screens */
+    }
+
+}
+
+
+@media screen and (max-width: 768px)
+{
+
+    
+        .buttons {
+            flex-direction: row; /* Stack buttons vertically */
+            text-align: center; /* Center-align text within buttons */
+            /* width: 100px;
+            height: 100px; */
+        }
+    
+        button {
+            margin: 0.5rem; /* Reduce margin for spacing */
+            width: 100px;
+            height: 100px;
+
+        }
+       
+    
+
+}
+
+@media screen and (max-width: 768px)
+{   
+    
+
+    .mobile .leaderboard {
+        top: 800px; /* Adjust positioning for smaller screens */
+        
+        
+    }
+
+    .leaderboard caption {
+        font-size: 1.5rem; /* Adjust caption font size for smaller screens */
+        justify-content: center;
+        
+    
+    }
+
+    .leaderboard th,
+    .leaderboard td {
+        padding: 2px 4px; /* Adjust cell padding for smaller screens */
+        
+        
+        
+    
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .footer 
+    {
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        bottom: 0;
+
+    }
 }
